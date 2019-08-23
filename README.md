@@ -13,6 +13,7 @@ Sono stati trasferiti i seguenti file:
 * C£ESO00F
 * V5TDOC0F
 * V5RDOC0F
+* TABEL00F
 
 Utilizzando i seguenti database non relazionali:
 
@@ -20,8 +21,17 @@ Utilizzando i seguenti database non relazionali:
 * Redis
 * Cassandra
 
+Nonchè il database relazionale:
+
+* MariaDB
+
+Frutto di un fork da MySQL.
+
 ## Tool utilizzati
 
-La migrazione è stata ultimata con Pentaho Data Integration. Il repository contiene tutti i file di migraione. 
+La migrazione è stata ultimata con Pentaho Data Integration. Mentre l'interrogazione è stata effettuata con i tool specifici per ciascun database.
 
-12 agosto 2019
+
+Il repository contiene tutti i file di migraione. 
+
+23 agosto 2019
