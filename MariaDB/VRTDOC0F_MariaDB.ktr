@@ -1,0 +1,2275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>VRTDOC0F_MariaDB</name>
+    <description />
+    <extended_description />
+    <trans_version />
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+      <parameter>
+        <name>NOME_FILE</name>
+        <default_value>VRTDOC0F</default_value>
+        <description />
+      </parameter>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection />
+        <schema />
+        <table />
+        <size_limit_lines />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject />
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection />
+        <schema />
+        <table />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection />
+      <table />
+      <field />
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file />
+    <capture_step_performance>Y</capture_step_performance>
+    <step_performance_capturing_delay>100</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2019/07/25 14:26:36.362</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2019/07/25 14:26:36.362</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>MARIADB</name>
+    <server>172.16.2.123</server>
+    <type>MARIADB</type>
+    <access>Native</access>
+    <database>smeup</database>
+    <port>3307</port>
+    <username>user</username>
+    <password>Encrypted 2be98afc86aa7f2e4bb18bd63c99dbdde</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>3307</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>SMEUP_DAT</name>
+    <server>srvlab01.smeup.com</server>
+    <type>AS/400</type>
+    <access>Native</access>
+    <database>SMEUP_DAT</database>
+    <port>60000</port>
+    <username>dioedo</username>
+    <password>Encrypted 2be98afc86aa7b780a418bc74d1adf689</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>60000</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Table input</from>
+      <to>Date: da INT a STRING</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Date: da INT a STRING</from>
+      <to>cancella Campi data posti a 0</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>cancella Campi data posti a 0</from>
+      <to>conversione date</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>conversione date</from>
+      <to>MARIADB OUTPUT con Date</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Table input</from>
+      <to>MARIADB OUTPUT</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Date: da INT a STRING</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>N</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>R§DT01</name>
+        <rename>R§DT01</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DT10</name>
+        <rename>R§DT10</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DT02</name>
+        <rename>R§DT02</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DT03</name>
+        <rename>R§DT03</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DT04</name>
+        <rename>R§DT04</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DT05</name>
+        <rename>R§DT05</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DT06</name>
+        <rename>R§DT06</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DT07</name>
+        <rename>R§DT07</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DT08</name>
+        <rename>R§DT08</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DT09</name>
+        <rename>R§DT09</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DTAG</name>
+        <rename>R§DTAG</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DTCC</name>
+        <rename>R§DTCC</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DTCR</name>
+        <rename>R§DTCR</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DFAP</name>
+        <rename>R§DFAP</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DTIN</name>
+        <rename>R§DTIN</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DPRO</name>
+        <rename>R§DPRO</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>160</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>MARIADB OUTPUT</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>MARIADB</connection>
+    <schema />
+    <table>V5RDOC0F</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>432</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>MARIADB OUTPUT con Date</name>
+    <type>TableOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>MARIADB</connection>
+    <schema />
+    <table>V5RDOC0F_date</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field />
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field />
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field />
+    <fields>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>912</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Table input</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>N</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>SMEUP_DAT</connection>
+    <sql>SELECT * FROM V5RDOC0F
+/*SELECT A§ARTI AS ARTI, A§DEAR AS DEAR, A§DEA2 AS DEA2, A§TIAR AS TIAR, A§TPAR AS TPAR, A§UNMS AS UNMS, A§PESO AS PESO, A§VOLU AS VOLU, A§CALT AS CALT, A§ARRI AS ARRI, A§DISE AS DISE, A§BARC AS BARC, A§STAT AS STAT, A§LIVE AS LIVE, A§GRDI AS GRDI, A§GRCI AS GRCI, A§NOMC AS NOMC, A§CSVQ AS CSVQ, A§CSVA AS CSVA, A§ENIR AS ENIR, A§LOTR AS LOTR, A§CONT AS CONT, A§RCDV AS RCDV, A§CASI AS CASI, A§NCOM AS NCOM, A§CESP AS CESP, A§CLMA AS CLMA, A§CLPR AS CLPR, A§CLGE AS CLGE, A§CLCO AS CLCO, A§CDLF AS CDLF, A§CLVA AS CLVA, A§CLFU AS CLFU, A§TC01 AS TC01, A§TC02 AS TC02, A§TC03 AS TC03, A§CL01 AS CL01, A§CL02 AS CL02, A§CL03 AS CL03, A§COD1 AS COD1, A§COD2 AS COD2, A§COD3 AS COD3, A§COD4 AS COD4, A§COD5 AS COD5, A§CD06 AS CD06, A§CD07 AS CD07, A§CD08 AS CD08, A§CD09 AS CD09, A§CD10 AS CD10, A§NUM1 AS NUM1, A§NUM2 AS NUM2, A§NUM3 AS NUM3, A§NUM4 AS NUM4, A§NUM5 AS NUM5, A§NR06 AS NR06, A§NR07 AS NR07, A§NR08 AS NR08, A§NR09 AS NR09, A§NR10 AS NR10, A§DT01 AS DT01, A§DT02 AS DT02, A§DT03 AS DT03, A§DT04 AS DT04, A§DT05 AS DT05, A§DT06 AS DT06, A§DT07 AS DT07, A§DT08 AS DT08, A§DT09 AS DT09, A§DT10 AS DT10, A§FL01 AS FL01, A§FL02 AS FL02, A§FL03 AS FL03, A§FL04 AS FL04, A§FL05 AS FL05, A§FL06 AS FL06, A§FL07 AS FL07, A§FL08 AS FL08, A§FL09 AS FL09, A§FL10 AS FL10, A§FL11 AS FL11, A§FL12 AS FL12, A§FL13 AS FL13, A§FL14 AS FL14, A§FL15 AS FL15, A§FL16 AS FL16, A§FL17 AS FL17, A§FL18 AS FL18, A§FL19 AS FL19, A§FL20 AS FL20, A§FL21 AS FL21, A§FL22 AS FL22, A§FL23 AS FL23, A§FL24 AS FL24, A§FL25 AS FL25, A§FL26 AS FL26, A§FL27 AS FL27, A§FL28 AS FL28, A§FL29 AS FL29, A§FL30 AS FL30, A§FL31 AS FL31, A§FL32 AS FL32, A§FL33 AS FL33, A§FL34 AS FL34, A§FL35 AS FL35, A§FL36 AS FL36, A§FL37 AS FL37, A§FL38 AS FL38, A§FL39 AS FL39, A§FL40 AS FL40, A§USIN AS USIN, A§DTIN AS DTIN, A§ORIN AS ORIN, A§USAG AS USAG, A§DTAG AS DTAG, A§ORAG AS ORAG FROM BRARTI0F*/</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>160</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>cancella Campi data posti a 0</name>
+    <type>NullIf</type>
+    <description />
+    <distribute>N</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>R§PFRA</name>
+        <value />
+      </field>
+      <field>
+        <name>R§AGE1</name>
+        <value />
+      </field>
+      <field>
+        <name>R§AGE2</name>
+        <value />
+      </field>
+      <field>
+        <name>R§AGE3</name>
+        <value />
+      </field>
+      <field>
+        <name>R§AGE4</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CASI</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL26</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CCAC</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CAMR</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CAM3</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CAM1</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CAM2</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CRIC</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CICL</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CLAS</name>
+        <value />
+      </field>
+      <field>
+        <name>R§COD1</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CD10</name>
+        <value />
+      </field>
+      <field>
+        <name>R§COD2</name>
+        <value />
+      </field>
+      <field>
+        <name>R§COD3</name>
+        <value />
+      </field>
+      <field>
+        <name>R§COD4</name>
+        <value />
+      </field>
+      <field>
+        <name>R§COD5</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CD06</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CD07</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CD08</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CD09</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NCNT</name>
+        <value />
+      </field>
+      <field>
+        <name>R§LIST</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CDMG</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CDOG</name>
+        <value />
+      </field>
+      <field>
+        <name>R§LOCN</name>
+        <value />
+      </field>
+      <field>
+        <name>R§COMM</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CONF</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CONT</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL10</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NCON</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL24</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL27</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CORD</name>
+        <value />
+      </field>
+      <field>
+        <name>R§DT01</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>R§DT10</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>R§DT02</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>R§DT03</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>R§DT04</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>R§DT05</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>R§DT06</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>R§DT07</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>R§DT08</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>R§DT09</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>R§DTAG</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>R§FL25</name>
+        <value />
+      </field>
+      <field>
+        <name>R§DTCC</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>R§DTCR</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>R§DFAP</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>R§DTIN</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>R§DPRO</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>R§DSO2</name>
+        <value />
+      </field>
+      <field>
+        <name>R§DSOG</name>
+        <value />
+      </field>
+      <field>
+        <name>R§DOAQ</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CDED</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CODS</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CDCL</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL44</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL46</name>
+        <value />
+      </field>
+      <field>
+        <name>R§ESMO</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FATC</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL20</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL29</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL30</name>
+        <value />
+      </field>
+      <field>
+        <name>R§IDOJ</name>
+        <value />
+      </field>
+      <field>
+        <name>R§IDDM</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL07</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL11</name>
+        <value />
+      </field>
+      <field>
+        <name>R§LIVE</name>
+        <value />
+      </field>
+      <field>
+        <name>R§LOTT</name>
+        <value />
+      </field>
+      <field>
+        <name>R§LOTE</name>
+        <value />
+      </field>
+      <field>
+        <name>R§CDMT</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL05</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL04</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL03</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NPRO</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL43</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NDO3</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NRI3</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NRFC</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL06</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NURE</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NUM1</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NR10</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NUM2</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NUM3</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NUM4</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NUM5</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NR06</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NR07</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NR08</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NR09</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NUCO</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NDOC</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NDOR</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NDO1</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NDO2</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NRIF</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NFAP</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NMAT</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NRIG</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NRIR</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NRI1</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NRI2</name>
+        <value />
+      </field>
+      <field>
+        <name>R§RRIF</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL13</name>
+        <value />
+      </field>
+      <field>
+        <name>R§OPER</name>
+        <value />
+      </field>
+      <field>
+        <name>R§ORAG</name>
+        <value />
+      </field>
+      <field>
+        <name>R§ORIN</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NORD</name>
+        <value />
+      </field>
+      <field>
+        <name>R§OGAG</name>
+        <value />
+      </field>
+      <field>
+        <name>R§OGIN</name>
+        <value />
+      </field>
+      <field>
+        <name>R§PEFF</name>
+        <value />
+      </field>
+      <field>
+        <name>R§PRIO</name>
+        <value />
+      </field>
+      <field>
+        <name>R§PER1</name>
+        <value />
+      </field>
+      <field>
+        <name>R§PER2</name>
+        <value />
+      </field>
+      <field>
+        <name>R§PER3</name>
+        <value />
+      </field>
+      <field>
+        <name>R§PER4</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL47</name>
+        <value />
+      </field>
+      <field>
+        <name>R§QEFV</name>
+        <value />
+      </field>
+      <field>
+        <name>R§QEFF</name>
+        <value />
+      </field>
+      <field>
+        <name>R§QRIV</name>
+        <value />
+      </field>
+      <field>
+        <name>R§QT01</name>
+        <value />
+      </field>
+      <field>
+        <name>R§QT02</name>
+        <value />
+      </field>
+      <field>
+        <name>R§QT03</name>
+        <value />
+      </field>
+      <field>
+        <name>R§QT04</name>
+        <value />
+      </field>
+      <field>
+        <name>R§QT05</name>
+        <value />
+      </field>
+      <field>
+        <name>R§Q01V</name>
+        <value />
+      </field>
+      <field>
+        <name>R§Q02V</name>
+        <value />
+      </field>
+      <field>
+        <name>R§Q03V</name>
+        <value />
+      </field>
+      <field>
+        <name>R§Q04V</name>
+        <value />
+      </field>
+      <field>
+        <name>R§Q05V</name>
+        <value />
+      </field>
+      <field>
+        <name>R§RECO</name>
+        <value />
+      </field>
+      <field>
+        <name>R§UTEN</name>
+        <value />
+      </field>
+      <field>
+        <name>R§ORAQ</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL22</name>
+        <value />
+      </field>
+      <field>
+        <name>R§NRRI</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL41</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL48</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL49</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL50</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL61</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL62</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL63</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL64</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL65</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL66</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL67</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL68</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL69</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL70</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL71</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL72</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL73</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL74</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL75</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL76</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL77</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL78</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL79</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL80</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL14</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL15</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL16</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL17</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL31</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL32</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL33</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL34</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL35</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL36</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL37</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL38</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL39</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL40</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL51</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL52</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL53</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL54</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL55</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL56</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL57</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL58</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL59</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL60</name>
+        <value />
+      </field>
+      <field>
+        <name>R§SCEN</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL02</name>
+        <value />
+      </field>
+      <field>
+        <name>R§SSSC</name>
+        <value />
+      </field>
+      <field>
+        <name>R§STAT</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL08</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL09</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL01</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL45</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL42</name>
+        <value />
+      </field>
+      <field>
+        <name>R§LDTF</name>
+        <value />
+      </field>
+      <field>
+        <name>R§LDTR</name>
+        <value />
+      </field>
+      <field>
+        <name>R§LDTV</name>
+        <value />
+      </field>
+      <field>
+        <name>R§TDO3</name>
+        <value />
+      </field>
+      <field>
+        <name>R§TCNT</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL23</name>
+        <value />
+      </field>
+      <field>
+        <name>R§TDOC</name>
+        <value />
+      </field>
+      <field>
+        <name>R§TDOR</name>
+        <value />
+      </field>
+      <field>
+        <name>R§TDO1</name>
+        <value />
+      </field>
+      <field>
+        <name>R§TDO2</name>
+        <value />
+      </field>
+      <field>
+        <name>R§TRIF</name>
+        <value />
+      </field>
+      <field>
+        <name>R§TCDD</name>
+        <value />
+      </field>
+      <field>
+        <name>R§TCDS</name>
+        <value />
+      </field>
+      <field>
+        <name>R§TCCL</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL21</name>
+        <value />
+      </field>
+      <field>
+        <name>R§TMAT</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL12</name>
+        <value />
+      </field>
+      <field>
+        <name>R§TPOG</name>
+        <value />
+      </field>
+      <field>
+        <name>R§TPRO</name>
+        <value />
+      </field>
+      <field>
+        <name>R§TRIG</name>
+        <value />
+      </field>
+      <field>
+        <name>R§TPR1</name>
+        <value />
+      </field>
+      <field>
+        <name>R§TPR2</name>
+        <value />
+      </field>
+      <field>
+        <name>R§TPR3</name>
+        <value />
+      </field>
+      <field>
+        <name>R§TPR4</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL28</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL19</name>
+        <value />
+      </field>
+      <field>
+        <name>R§FL18</name>
+        <value />
+      </field>
+      <field>
+        <name>R§USTA</name>
+        <value />
+      </field>
+      <field>
+        <name>R§UNMS</name>
+        <value />
+      </field>
+      <field>
+        <name>R§UNMV</name>
+        <value />
+      </field>
+      <field>
+        <name>R§USAG</name>
+        <value />
+      </field>
+      <field>
+        <name>R§USIN</name>
+        <value />
+      </field>
+      <field>
+        <name>R§VAL1</name>
+        <value />
+      </field>
+      <field>
+        <name>R§VAL2</name>
+        <value />
+      </field>
+      <field>
+        <name>R§VAL3</name>
+        <value />
+      </field>
+      <field>
+        <name>R§VAL4</name>
+        <value />
+      </field>
+      <field>
+        <name>R§VAL5</name>
+        <value />
+      </field>
+      <field>
+        <name>R§VALR</name>
+        <value />
+      </field>
+      <field>
+        <name>R§VODS</name>
+        <value />
+      </field>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>432</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>conversione date</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>R§DT01</name>
+        <rename>R§DT01</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DT10</name>
+        <rename>R§DT10</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DT02</name>
+        <rename>R§DT02</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DT03</name>
+        <rename>R§DT03</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DT04</name>
+        <rename>R§DT04</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DT05</name>
+        <rename>R§DT05</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DT06</name>
+        <rename>R§DT06</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DT07</name>
+        <rename>R§DT07</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DT08</name>
+        <rename>R§DT08</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DT09</name>
+        <rename>R§DT09</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DTAG</name>
+        <rename>R§DTAG</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DTCC</name>
+        <rename>R§DTCC</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DTCR</name>
+        <rename>R§DTCR</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DFAP</name>
+        <rename>R§DFAP</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DTIN</name>
+        <rename>R§DTIN</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>R§DPRO</name>
+        <rename>R§DPRO</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>688</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+  <attributes />
+</transformation>
