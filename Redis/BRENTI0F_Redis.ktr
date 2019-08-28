@@ -1,0 +1,4471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>BRENTI0F_Redis</name>
+    <description />
+    <extended_description />
+    <trans_version />
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+      <parameter>
+        <name>NOME_FILE</name>
+        <default_value>BRENTI0F</default_value>
+        <description />
+      </parameter>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection />
+        <schema />
+        <table />
+        <size_limit_lines />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject />
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection />
+        <schema />
+        <table />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection />
+      <table />
+      <field />
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file />
+    <capture_step_performance>Y</capture_step_performance>
+    <step_performance_capturing_delay>100</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2019/07/25 14:26:36.362</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2019/07/25 14:26:36.362</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>SMEUP_DAT</name>
+    <server>srvlab01.smeup.com</server>
+    <type>AS/400</type>
+    <access>Native</access>
+    <database>SMEUP_DAT</database>
+    <port>60000</port>
+    <username>dioedo</username>
+    <password>Encrypted 2be98afc86aa7b780a418bc74d1adf689</password>
+    <servername />
+    <data_tablespace />
+    <index_tablespace />
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>60000</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>Table input</from>
+      <to>Date: da INT a STRING</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Date: da INT a STRING</from>
+      <to>cancella Campi data posti a 0</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>cancella Campi data posti a 0</from>
+      <to>conversione date</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Select values</from>
+      <to>Redis Output</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Table input</from>
+      <to>Calculator</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>JSON output</from>
+      <to>Select values</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Calculator</from>
+      <to>JSON output</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Table input</from>
+      <to>JSON output 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>JSON output 2</from>
+      <to>Select values 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 2</from>
+      <to>Redis Output 2</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Date: da INT a STRING</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>N</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>E§DFNV</name>
+        <rename>E§DFNV</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DINV</name>
+        <rename>E§DINV</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DT01</name>
+        <rename>E§DT01</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DT02</name>
+        <rename>E§DT02</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DT03</name>
+        <rename>E§DT03</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DT04</name>
+        <rename>E§DT04</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DT05</name>
+        <rename>E§DT05</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DT06</name>
+        <rename>E§DT06</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DT07</name>
+        <rename>E§DT07</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DT08</name>
+        <rename>E§DT08</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DT09</name>
+        <rename>E§DT09</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DT10</name>
+        <rename>E§DT10</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DTAG</name>
+        <rename>E§DTAG</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DTIE</name>
+        <rename>E§DTIE</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DTIN</name>
+        <rename>E§DTIN</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DVES</name>
+        <rename>E§DVES</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DDIN</name>
+        <rename>E§DDIN</rename>
+        <type>String</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Table input</name>
+    <type>TableInput</type>
+    <description />
+    <distribute>N</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <connection>SMEUP_DAT</connection>
+    <sql>SELECT * FROM BRENTI0F
+/*SELECT A§ARTI AS ARTI, A§DEAR AS DEAR, A§DEA2 AS DEA2, A§TIAR AS TIAR, A§TPAR AS TPAR, A§UNMS AS UNMS, A§PESO AS PESO, A§VOLU AS VOLU, A§CALT AS CALT, A§ARRI AS ARRI, A§DISE AS DISE, A§BARC AS BARC, A§STAT AS STAT, A§LIVE AS LIVE, A§GRDI AS GRDI, A§GRCI AS GRCI, A§NOMC AS NOMC, A§CSVQ AS CSVQ, A§CSVA AS CSVA, A§ENIR AS ENIR, A§LOTR AS LOTR, A§CONT AS CONT, A§RCDV AS RCDV, A§CASI AS CASI, A§NCOM AS NCOM, A§CESP AS CESP, A§CLMA AS CLMA, A§CLPR AS CLPR, A§CLGE AS CLGE, A§CLCO AS CLCO, A§CDLF AS CDLF, A§CLVA AS CLVA, A§CLFU AS CLFU, A§TC01 AS TC01, A§TC02 AS TC02, A§TC03 AS TC03, A§CL01 AS CL01, A§CL02 AS CL02, A§CL03 AS CL03, A§COD1 AS COD1, A§COD2 AS COD2, A§COD3 AS COD3, A§COD4 AS COD4, A§COD5 AS COD5, A§CD06 AS CD06, A§CD07 AS CD07, A§CD08 AS CD08, A§CD09 AS CD09, A§CD10 AS CD10, A§NUM1 AS NUM1, A§NUM2 AS NUM2, A§NUM3 AS NUM3, A§NUM4 AS NUM4, A§NUM5 AS NUM5, A§NR06 AS NR06, A§NR07 AS NR07, A§NR08 AS NR08, A§NR09 AS NR09, A§NR10 AS NR10, A§DT01 AS DT01, A§DT02 AS DT02, A§DT03 AS DT03, A§DT04 AS DT04, A§DT05 AS DT05, A§DT06 AS DT06, A§DT07 AS DT07, A§DT08 AS DT08, A§DT09 AS DT09, A§DT10 AS DT10, A§FL01 AS FL01, A§FL02 AS FL02, A§FL03 AS FL03, A§FL04 AS FL04, A§FL05 AS FL05, A§FL06 AS FL06, A§FL07 AS FL07, A§FL08 AS FL08, A§FL09 AS FL09, A§FL10 AS FL10, A§FL11 AS FL11, A§FL12 AS FL12, A§FL13 AS FL13, A§FL14 AS FL14, A§FL15 AS FL15, A§FL16 AS FL16, A§FL17 AS FL17, A§FL18 AS FL18, A§FL19 AS FL19, A§FL20 AS FL20, A§FL21 AS FL21, A§FL22 AS FL22, A§FL23 AS FL23, A§FL24 AS FL24, A§FL25 AS FL25, A§FL26 AS FL26, A§FL27 AS FL27, A§FL28 AS FL28, A§FL29 AS FL29, A§FL30 AS FL30, A§FL31 AS FL31, A§FL32 AS FL32, A§FL33 AS FL33, A§FL34 AS FL34, A§FL35 AS FL35, A§FL36 AS FL36, A§FL37 AS FL37, A§FL38 AS FL38, A§FL39 AS FL39, A§FL40 AS FL40, A§USIN AS USIN, A§DTIN AS DTIN, A§ORIN AS ORIN, A§USAG AS USAG, A§DTAG AS DTAG, A§ORAG AS ORAG FROM BRARTI0F*/</sql>
+    <limit>0</limit>
+    <lookup />
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>cancella Campi data posti a 0</name>
+    <type>NullIf</type>
+    <description />
+    <distribute>N</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>E§AGE1</name>
+        <value />
+      </field>
+      <field>
+        <name>E§AGEN</name>
+        <value />
+      </field>
+      <field>
+        <name>E§AZIE</name>
+        <value />
+      </field>
+      <field>
+        <name>E§BANC</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CACO</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CACR</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CAPA</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CAUS</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CBA2</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CBA3</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CCOM</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CCON</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CCOR</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CCRR</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CDIN</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CINC</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CLAB</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CLAV</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CNAZ</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CNOM</name>
+        <value />
+      </field>
+      <field>
+        <name>E§COD0</name>
+        <value />
+      </field>
+      <field>
+        <name>E§COD1</name>
+        <value />
+      </field>
+      <field>
+        <name>E§COD2</name>
+        <value />
+      </field>
+      <field>
+        <name>E§COD3</name>
+        <value />
+      </field>
+      <field>
+        <name>E§COD4</name>
+        <value />
+      </field>
+      <field>
+        <name>E§COD5</name>
+        <value />
+      </field>
+      <field>
+        <name>E§COD6</name>
+        <value />
+      </field>
+      <field>
+        <name>E§COD7</name>
+        <value />
+      </field>
+      <field>
+        <name>E§COD8</name>
+        <value />
+      </field>
+      <field>
+        <name>E§COD9</name>
+        <value />
+      </field>
+      <field>
+        <name>E§COFI</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CONS</name>
+        <value />
+      </field>
+      <field>
+        <name>E§COPA</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CPAE</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CPAI</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CPRZ</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CRAG</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CRCP</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CREG</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CSME</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CSP1</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CSP2</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CSP3</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CSP4</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CSP5</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CSPE</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CTA1</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CTA2</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CTA3</name>
+        <value />
+      </field>
+      <field>
+        <name>E§CVET</name>
+        <value />
+      </field>
+      <field>
+        <name>E§DDIN</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>E§DFNV</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>E§DINV</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>E§DT01</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>E§DT02</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>E§DT03</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>E§DT04</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>E§DT05</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>E§DT06</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>E§DT07</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>E§DT08</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>E§DT09</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>E§DT10</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>E§DTAG</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>E§DTIE</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>E§DTIN</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>E§DVES</name>
+        <value>0</value>
+      </field>
+      <field>
+        <name>E§FIDO</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL01</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL02</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL03</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL04</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL05</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL06</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL07</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL08</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL09</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL10</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL11</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL12</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL13</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL14</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL15</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL16</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL17</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL18</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL19</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL20</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL21</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL22</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL23</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL24</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL25</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL26</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL27</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL28</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL29</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL30</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL31</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL32</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL33</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL34</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL35</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL36</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL37</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL38</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL39</name>
+        <value />
+      </field>
+      <field>
+        <name>E§FL40</name>
+        <value />
+      </field>
+      <field>
+        <name>E§GCHI</name>
+        <value />
+      </field>
+      <field>
+        <name>E§GCOL</name>
+        <value />
+      </field>
+      <field>
+        <name>E§GCON</name>
+        <value />
+      </field>
+      <field>
+        <name>E§GRUP</name>
+        <value />
+      </field>
+      <field>
+        <name>E§IBAN</name>
+        <value />
+      </field>
+      <field>
+        <name>E§IDOJ</name>
+        <value />
+      </field>
+      <field>
+        <name>E§IEMA</name>
+        <value />
+      </field>
+      <field>
+        <name>E§IMBA</name>
+        <value />
+      </field>
+      <field>
+        <name>E§INDA</name>
+        <value />
+      </field>
+      <field>
+        <name>E§LING</name>
+        <value />
+      </field>
+      <field>
+        <name>E§LIST</name>
+        <value />
+      </field>
+      <field>
+        <name>E§LIVE</name>
+        <value />
+      </field>
+      <field>
+        <name>E§LOCA</name>
+        <value />
+      </field>
+      <field>
+        <name>E§NAZI</name>
+        <value />
+      </field>
+      <field>
+        <name>E§NCOD</name>
+        <value />
+      </field>
+      <field>
+        <name>E§NMNE</name>
+        <value />
+      </field>
+      <field>
+        <name>E§NUM0</name>
+        <value />
+      </field>
+      <field>
+        <name>E§NUM1</name>
+        <value />
+      </field>
+      <field>
+        <name>E§NUM2</name>
+        <value />
+      </field>
+      <field>
+        <name>E§NUM3</name>
+        <value />
+      </field>
+      <field>
+        <name>E§NUM4</name>
+        <value />
+      </field>
+      <field>
+        <name>E§NUM5</name>
+        <value />
+      </field>
+      <field>
+        <name>E§NUM6</name>
+        <value />
+      </field>
+      <field>
+        <name>E§NUM7</name>
+        <value />
+      </field>
+      <field>
+        <name>E§NUM8</name>
+        <value />
+      </field>
+      <field>
+        <name>E§NUM9</name>
+        <value />
+      </field>
+      <field>
+        <name>E§ORAG</name>
+        <value />
+      </field>
+      <field>
+        <name>E§ORIN</name>
+        <value />
+      </field>
+      <field>
+        <name>E§PECO</name>
+        <value />
+      </field>
+      <field>
+        <name>E§PER1</name>
+        <value />
+      </field>
+      <field>
+        <name>E§PERP</name>
+        <value />
+      </field>
+      <field>
+        <name>E§PRIO</name>
+        <value />
+      </field>
+      <field>
+        <name>E§PROV</name>
+        <value />
+      </field>
+      <field>
+        <name>E§RAGA</name>
+        <value />
+      </field>
+      <field>
+        <name>E§RAGS</name>
+        <value />
+      </field>
+      <field>
+        <name>E§SCEN</name>
+        <value />
+      </field>
+      <field>
+        <name>E§SCON</name>
+        <value />
+      </field>
+      <field>
+        <name>E§SPED</name>
+        <value />
+      </field>
+      <field>
+        <name>E§STAT</name>
+        <value />
+      </field>
+      <field>
+        <name>E§SWIF</name>
+        <value />
+      </field>
+      <field>
+        <name>E§TCON</name>
+        <value />
+      </field>
+      <field>
+        <name>E§TCRR</name>
+        <value />
+      </field>
+      <field>
+        <name>E§TELE</name>
+        <value />
+      </field>
+      <field>
+        <name>E§TELX</name>
+        <value />
+      </field>
+      <field>
+        <name>E§TFAX</name>
+        <value />
+      </field>
+      <field>
+        <name>E§TINC</name>
+        <value />
+      </field>
+      <field>
+        <name>E§TNOM</name>
+        <value />
+      </field>
+      <field>
+        <name>E§TPRZ</name>
+        <value />
+      </field>
+      <field>
+        <name>E§TRAG</name>
+        <value />
+      </field>
+      <field>
+        <name>E§TSOG</name>
+        <value />
+      </field>
+      <field>
+        <name>E§TSPE</name>
+        <value />
+      </field>
+      <field>
+        <name>E§TVET</name>
+        <value />
+      </field>
+      <field>
+        <name>E§USAG</name>
+        <value />
+      </field>
+      <field>
+        <name>E§USIN</name>
+        <value />
+      </field>
+      <field>
+        <name>E§VALU</name>
+        <value />
+      </field>
+      <field>
+        <name>E§ZONA</name>
+        <value />
+      </field>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>conversione date</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>E§DFNV</name>
+        <rename>E§DFNV</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DINV</name>
+        <rename>E§DINV</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DT01</name>
+        <rename>E§DT01</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DT02</name>
+        <rename>E§DT02</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DT03</name>
+        <rename>E§DT03</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DT04</name>
+        <rename>E§DT04</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DT05</name>
+        <rename>E§DT05</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DT06</name>
+        <rename>E§DT06</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DT07</name>
+        <rename>E§DT07</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DT08</name>
+        <rename>E§DT08</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DT09</name>
+        <rename>E§DT09</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DT10</name>
+        <rename>E§DT10</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DTAG</name>
+        <rename>E§DTAG</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DTIE</name>
+        <rename>E§DTIE</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DTIN</name>
+        <rename>E§DTIN</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DVES</name>
+        <rename>E§DVES</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+      <meta>
+        <name>E§DDIN</name>
+        <rename>E§DDIN</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale>it</date_format_locale>
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>688</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <remove>
+        <name>E§TRAG</name>
+      </remove>
+      <remove>
+        <name>E§CRAG</name>
+      </remove>
+      <remove>
+        <name>E§SCEN</name>
+      </remove>
+      <remove>
+        <name>E§AZIE</name>
+      </remove>
+      <remove>
+        <name>E§DINV</name>
+      </remove>
+      <remove>
+        <name>E§DFNV</name>
+      </remove>
+      <remove>
+        <name>E§GRUP</name>
+      </remove>
+      <remove>
+        <name>E§NMNE</name>
+      </remove>
+      <remove>
+        <name>E§NCOD</name>
+      </remove>
+      <remove>
+        <name>E§LIVE</name>
+      </remove>
+      <remove>
+        <name>E§STAT</name>
+      </remove>
+      <remove>
+        <name>E§RAGS</name>
+      </remove>
+      <remove>
+        <name>E§RAGA</name>
+      </remove>
+      <remove>
+        <name>E§INDI</name>
+      </remove>
+      <remove>
+        <name>E§INDA</name>
+      </remove>
+      <remove>
+        <name>E§TELE</name>
+      </remove>
+      <remove>
+        <name>E§TFAX</name>
+      </remove>
+      <remove>
+        <name>E§TELX</name>
+      </remove>
+      <remove>
+        <name>E§IEMA</name>
+      </remove>
+      <remove>
+        <name>E§PECO</name>
+      </remove>
+      <remove>
+        <name>E§CNAZ</name>
+      </remove>
+      <remove>
+        <name>E§CREG</name>
+      </remove>
+      <remove>
+        <name>E§CCOM</name>
+      </remove>
+      <remove>
+        <name>E§LOCA</name>
+      </remove>
+      <remove>
+        <name>E§PROV</name>
+      </remove>
+      <remove>
+        <name>E§NAZI</name>
+      </remove>
+      <remove>
+        <name>E§CAPA</name>
+      </remove>
+      <remove>
+        <name>E§ZONA</name>
+      </remove>
+      <remove>
+        <name>E§LING</name>
+      </remove>
+      <remove>
+        <name>E§VALU</name>
+      </remove>
+      <remove>
+        <name>E§TSOG</name>
+      </remove>
+      <remove>
+        <name>E§CPAI</name>
+      </remove>
+      <remove>
+        <name>E§COFI</name>
+      </remove>
+      <remove>
+        <name>E§CPAE</name>
+      </remove>
+      <remove>
+        <name>E§CTA1</name>
+      </remove>
+      <remove>
+        <name>E§CTA2</name>
+      </remove>
+      <remove>
+        <name>E§CTA3</name>
+      </remove>
+      <remove>
+        <name>E§DVES</name>
+      </remove>
+      <remove>
+        <name>E§CDIN</name>
+      </remove>
+      <remove>
+        <name>E§DDIN</name>
+      </remove>
+      <remove>
+        <name>E§TNOM</name>
+      </remove>
+      <remove>
+        <name>E§CNOM</name>
+      </remove>
+      <remove>
+        <name>E§TSPE</name>
+      </remove>
+      <remove>
+        <name>E§CSPE</name>
+      </remove>
+      <remove>
+        <name>E§TCON</name>
+      </remove>
+      <remove>
+        <name>E§CCON</name>
+      </remove>
+      <remove>
+        <name>E§TINC</name>
+      </remove>
+      <remove>
+        <name>E§CINC</name>
+      </remove>
+      <remove>
+        <name>E§TPRZ</name>
+      </remove>
+      <remove>
+        <name>E§CPRZ</name>
+      </remove>
+      <remove>
+        <name>E§TCRR</name>
+      </remove>
+      <remove>
+        <name>E§CCRR</name>
+      </remove>
+      <remove>
+        <name>E§TVET</name>
+      </remove>
+      <remove>
+        <name>E§CVET</name>
+      </remove>
+      <remove>
+        <name>E§CACO</name>
+      </remove>
+      <remove>
+        <name>E§CACR</name>
+      </remove>
+      <remove>
+        <name>E§CLAB</name>
+      </remove>
+      <remove>
+        <name>E§CLAV</name>
+      </remove>
+      <remove>
+        <name>E§CSME</name>
+      </remove>
+      <remove>
+        <name>E§CONS</name>
+      </remove>
+      <remove>
+        <name>E§SPED</name>
+      </remove>
+      <remove>
+        <name>E§IMBA</name>
+      </remove>
+      <remove>
+        <name>E§CAUS</name>
+      </remove>
+      <remove>
+        <name>E§GCHI</name>
+      </remove>
+      <remove>
+        <name>E§GCON</name>
+      </remove>
+      <remove>
+        <name>E§GCOL</name>
+      </remove>
+      <remove>
+        <name>E§AGEN</name>
+      </remove>
+      <remove>
+        <name>E§PERP</name>
+      </remove>
+      <remove>
+        <name>E§AGE1</name>
+      </remove>
+      <remove>
+        <name>E§PER1</name>
+      </remove>
+      <remove>
+        <name>E§CRCP</name>
+      </remove>
+      <remove>
+        <name>E§COPA</name>
+      </remove>
+      <remove>
+        <name>E§CSP1</name>
+      </remove>
+      <remove>
+        <name>E§CSP2</name>
+      </remove>
+      <remove>
+        <name>E§CSP3</name>
+      </remove>
+      <remove>
+        <name>E§CSP4</name>
+      </remove>
+      <remove>
+        <name>E§CSP5</name>
+      </remove>
+      <remove>
+        <name>E§LIST</name>
+      </remove>
+      <remove>
+        <name>E§SCON</name>
+      </remove>
+      <remove>
+        <name>E§PRIO</name>
+      </remove>
+      <remove>
+        <name>E§FIDO</name>
+      </remove>
+      <remove>
+        <name>E§BANC</name>
+      </remove>
+      <remove>
+        <name>E§CCOR</name>
+      </remove>
+      <remove>
+        <name>E§CBA2</name>
+      </remove>
+      <remove>
+        <name>E§IBAN</name>
+      </remove>
+      <remove>
+        <name>E§SWIF</name>
+      </remove>
+      <remove>
+        <name>E§CBA3</name>
+      </remove>
+      <remove>
+        <name>E§DTIE</name>
+      </remove>
+      <remove>
+        <name>E§DT01</name>
+      </remove>
+      <remove>
+        <name>E§DT02</name>
+      </remove>
+      <remove>
+        <name>E§DT03</name>
+      </remove>
+      <remove>
+        <name>E§DT04</name>
+      </remove>
+      <remove>
+        <name>E§DT05</name>
+      </remove>
+      <remove>
+        <name>E§DT06</name>
+      </remove>
+      <remove>
+        <name>E§DT07</name>
+      </remove>
+      <remove>
+        <name>E§DT08</name>
+      </remove>
+      <remove>
+        <name>E§DT09</name>
+      </remove>
+      <remove>
+        <name>E§DT10</name>
+      </remove>
+      <remove>
+        <name>E§COD1</name>
+      </remove>
+      <remove>
+        <name>E§COD2</name>
+      </remove>
+      <remove>
+        <name>E§COD3</name>
+      </remove>
+      <remove>
+        <name>E§COD4</name>
+      </remove>
+      <remove>
+        <name>E§COD5</name>
+      </remove>
+      <remove>
+        <name>E§COD6</name>
+      </remove>
+      <remove>
+        <name>E§COD7</name>
+      </remove>
+      <remove>
+        <name>E§COD8</name>
+      </remove>
+      <remove>
+        <name>E§COD9</name>
+      </remove>
+      <remove>
+        <name>E§COD0</name>
+      </remove>
+      <remove>
+        <name>E§NUM1</name>
+      </remove>
+      <remove>
+        <name>E§NUM2</name>
+      </remove>
+      <remove>
+        <name>E§NUM3</name>
+      </remove>
+      <remove>
+        <name>E§NUM4</name>
+      </remove>
+      <remove>
+        <name>E§NUM5</name>
+      </remove>
+      <remove>
+        <name>E§NUM6</name>
+      </remove>
+      <remove>
+        <name>E§NUM7</name>
+      </remove>
+      <remove>
+        <name>E§NUM8</name>
+      </remove>
+      <remove>
+        <name>E§NUM9</name>
+      </remove>
+      <remove>
+        <name>E§NUM0</name>
+      </remove>
+      <remove>
+        <name>E§FL01</name>
+      </remove>
+      <remove>
+        <name>E§FL02</name>
+      </remove>
+      <remove>
+        <name>E§FL03</name>
+      </remove>
+      <remove>
+        <name>E§FL04</name>
+      </remove>
+      <remove>
+        <name>E§FL05</name>
+      </remove>
+      <remove>
+        <name>E§FL06</name>
+      </remove>
+      <remove>
+        <name>E§FL07</name>
+      </remove>
+      <remove>
+        <name>E§FL08</name>
+      </remove>
+      <remove>
+        <name>E§FL09</name>
+      </remove>
+      <remove>
+        <name>E§FL10</name>
+      </remove>
+      <remove>
+        <name>E§FL11</name>
+      </remove>
+      <remove>
+        <name>E§FL12</name>
+      </remove>
+      <remove>
+        <name>E§FL13</name>
+      </remove>
+      <remove>
+        <name>E§FL14</name>
+      </remove>
+      <remove>
+        <name>E§FL15</name>
+      </remove>
+      <remove>
+        <name>E§FL16</name>
+      </remove>
+      <remove>
+        <name>E§FL17</name>
+      </remove>
+      <remove>
+        <name>E§FL18</name>
+      </remove>
+      <remove>
+        <name>E§FL19</name>
+      </remove>
+      <remove>
+        <name>E§FL20</name>
+      </remove>
+      <remove>
+        <name>E§FL21</name>
+      </remove>
+      <remove>
+        <name>E§FL22</name>
+      </remove>
+      <remove>
+        <name>E§FL23</name>
+      </remove>
+      <remove>
+        <name>E§FL24</name>
+      </remove>
+      <remove>
+        <name>E§FL25</name>
+      </remove>
+      <remove>
+        <name>E§FL26</name>
+      </remove>
+      <remove>
+        <name>E§FL27</name>
+      </remove>
+      <remove>
+        <name>E§FL28</name>
+      </remove>
+      <remove>
+        <name>E§FL29</name>
+      </remove>
+      <remove>
+        <name>E§FL30</name>
+      </remove>
+      <remove>
+        <name>E§FL31</name>
+      </remove>
+      <remove>
+        <name>E§FL32</name>
+      </remove>
+      <remove>
+        <name>E§FL33</name>
+      </remove>
+      <remove>
+        <name>E§FL34</name>
+      </remove>
+      <remove>
+        <name>E§FL35</name>
+      </remove>
+      <remove>
+        <name>E§FL36</name>
+      </remove>
+      <remove>
+        <name>E§FL37</name>
+      </remove>
+      <remove>
+        <name>E§FL38</name>
+      </remove>
+      <remove>
+        <name>E§FL39</name>
+      </remove>
+      <remove>
+        <name>E§FL40</name>
+      </remove>
+      <remove>
+        <name>E§ORIN</name>
+      </remove>
+      <remove>
+        <name>E§DTIN</name>
+      </remove>
+      <remove>
+        <name>E§USIN</name>
+      </remove>
+      <remove>
+        <name>E§ORAG</name>
+      </remove>
+      <remove>
+        <name>E§DTAG</name>
+      </remove>
+      <remove>
+        <name>E§USAG</name>
+      </remove>
+      <meta>
+        <name>SCORE</name>
+        <rename>SCORE</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask />
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding />
+        <decimal_symbol />
+        <grouping_symbol />
+        <currency_symbol />
+        <storage_type />
+      </meta>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Redis Output</name>
+    <type>RedisOutputStep</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <arguments>
+      <command>ZADD</command>
+      <url>172.16.2.123:6379</url>
+    </arguments>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>JSON output</name>
+    <type>JsonOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <outputValue>JSON</outputValue>
+    <jsonBloc>data</jsonBloc>
+    <nrRowsInBloc>1</nrRowsInBloc>
+    <operation_type>outputvalue</operation_type>
+    <compatibility_mode>N</compatibility_mode>
+    <encoding>UTF-8</encoding>
+    <addtoresult>N</addtoresult>
+    <file>
+      <name />
+      <extention>js</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <create_parent_folder>N</create_parent_folder>
+      <DoNotOpenNewFileInit>N</DoNotOpenNewFileInit>
+      <servlet_output>N</servlet_output>
+    </file>
+    <fields>
+      <field>
+        <name>E§TRAG</name>
+        <element>E§TRAG</element>
+      </field>
+      <field>
+        <name>E§CRAG</name>
+        <element>E§CRAG</element>
+      </field>
+      <field>
+        <name>E§SCEN</name>
+        <element>E§SCEN</element>
+      </field>
+      <field>
+        <name>E§AZIE</name>
+        <element>E§AZIE</element>
+      </field>
+      <field>
+        <name>E§IDOJ</name>
+        <element>E§IDOJ</element>
+      </field>
+      <field>
+        <name>E§DINV</name>
+        <element>E§DINV</element>
+      </field>
+      <field>
+        <name>E§DFNV</name>
+        <element>E§DFNV</element>
+      </field>
+      <field>
+        <name>E§GRUP</name>
+        <element>E§GRUP</element>
+      </field>
+      <field>
+        <name>E§NMNE</name>
+        <element>E§NMNE</element>
+      </field>
+      <field>
+        <name>E§NCOD</name>
+        <element>E§NCOD</element>
+      </field>
+      <field>
+        <name>E§LIVE</name>
+        <element>E§LIVE</element>
+      </field>
+      <field>
+        <name>E§STAT</name>
+        <element>E§STAT</element>
+      </field>
+      <field>
+        <name>E§RAGS</name>
+        <element>E§RAGS</element>
+      </field>
+      <field>
+        <name>E§RAGA</name>
+        <element>E§RAGA</element>
+      </field>
+      <field>
+        <name>E§INDI</name>
+        <element>E§INDI</element>
+      </field>
+      <field>
+        <name>E§INDA</name>
+        <element>E§INDA</element>
+      </field>
+      <field>
+        <name>E§TELE</name>
+        <element>E§TELE</element>
+      </field>
+      <field>
+        <name>E§TFAX</name>
+        <element>E§TFAX</element>
+      </field>
+      <field>
+        <name>E§TELX</name>
+        <element>E§TELX</element>
+      </field>
+      <field>
+        <name>E§IEMA</name>
+        <element>E§IEMA</element>
+      </field>
+      <field>
+        <name>E§PECO</name>
+        <element>E§PECO</element>
+      </field>
+      <field>
+        <name>E§CNAZ</name>
+        <element>E§CNAZ</element>
+      </field>
+      <field>
+        <name>E§CREG</name>
+        <element>E§CREG</element>
+      </field>
+      <field>
+        <name>E§CCOM</name>
+        <element>E§CCOM</element>
+      </field>
+      <field>
+        <name>E§LOCA</name>
+        <element>E§LOCA</element>
+      </field>
+      <field>
+        <name>E§PROV</name>
+        <element>E§PROV</element>
+      </field>
+      <field>
+        <name>E§NAZI</name>
+        <element>E§NAZI</element>
+      </field>
+      <field>
+        <name>E§CAPA</name>
+        <element>E§CAPA</element>
+      </field>
+      <field>
+        <name>E§ZONA</name>
+        <element>E§ZONA</element>
+      </field>
+      <field>
+        <name>E§LING</name>
+        <element>E§LING</element>
+      </field>
+      <field>
+        <name>E§VALU</name>
+        <element>E§VALU</element>
+      </field>
+      <field>
+        <name>E§TSOG</name>
+        <element>E§TSOG</element>
+      </field>
+      <field>
+        <name>E§CPAI</name>
+        <element>E§CPAI</element>
+      </field>
+      <field>
+        <name>E§COFI</name>
+        <element>E§COFI</element>
+      </field>
+      <field>
+        <name>E§CPAE</name>
+        <element>E§CPAE</element>
+      </field>
+      <field>
+        <name>E§CTA1</name>
+        <element>E§CTA1</element>
+      </field>
+      <field>
+        <name>E§CTA2</name>
+        <element>E§CTA2</element>
+      </field>
+      <field>
+        <name>E§CTA3</name>
+        <element>E§CTA3</element>
+      </field>
+      <field>
+        <name>E§DVES</name>
+        <element>E§DVES</element>
+      </field>
+      <field>
+        <name>E§CDIN</name>
+        <element>E§CDIN</element>
+      </field>
+      <field>
+        <name>E§DDIN</name>
+        <element>E§DDIN</element>
+      </field>
+      <field>
+        <name>E§TNOM</name>
+        <element>E§TNOM</element>
+      </field>
+      <field>
+        <name>E§CNOM</name>
+        <element>E§CNOM</element>
+      </field>
+      <field>
+        <name>E§TSPE</name>
+        <element>E§TSPE</element>
+      </field>
+      <field>
+        <name>E§CSPE</name>
+        <element>E§CSPE</element>
+      </field>
+      <field>
+        <name>E§TCON</name>
+        <element>E§TCON</element>
+      </field>
+      <field>
+        <name>E§CCON</name>
+        <element>E§CCON</element>
+      </field>
+      <field>
+        <name>E§TINC</name>
+        <element>E§TINC</element>
+      </field>
+      <field>
+        <name>E§CINC</name>
+        <element>E§CINC</element>
+      </field>
+      <field>
+        <name>E§TPRZ</name>
+        <element>E§TPRZ</element>
+      </field>
+      <field>
+        <name>E§CPRZ</name>
+        <element>E§CPRZ</element>
+      </field>
+      <field>
+        <name>E§TCRR</name>
+        <element>E§TCRR</element>
+      </field>
+      <field>
+        <name>E§CCRR</name>
+        <element>E§CCRR</element>
+      </field>
+      <field>
+        <name>E§TVET</name>
+        <element>E§TVET</element>
+      </field>
+      <field>
+        <name>E§CVET</name>
+        <element>E§CVET</element>
+      </field>
+      <field>
+        <name>E§CACO</name>
+        <element>E§CACO</element>
+      </field>
+      <field>
+        <name>E§CACR</name>
+        <element>E§CACR</element>
+      </field>
+      <field>
+        <name>E§CLAB</name>
+        <element>E§CLAB</element>
+      </field>
+      <field>
+        <name>E§CLAV</name>
+        <element>E§CLAV</element>
+      </field>
+      <field>
+        <name>E§CSME</name>
+        <element>E§CSME</element>
+      </field>
+      <field>
+        <name>E§CONS</name>
+        <element>E§CONS</element>
+      </field>
+      <field>
+        <name>E§SPED</name>
+        <element>E§SPED</element>
+      </field>
+      <field>
+        <name>E§IMBA</name>
+        <element>E§IMBA</element>
+      </field>
+      <field>
+        <name>E§CAUS</name>
+        <element>E§CAUS</element>
+      </field>
+      <field>
+        <name>E§GCHI</name>
+        <element>E§GCHI</element>
+      </field>
+      <field>
+        <name>E§GCON</name>
+        <element>E§GCON</element>
+      </field>
+      <field>
+        <name>E§GCOL</name>
+        <element>E§GCOL</element>
+      </field>
+      <field>
+        <name>E§AGEN</name>
+        <element>E§AGEN</element>
+      </field>
+      <field>
+        <name>E§PERP</name>
+        <element>E§PERP</element>
+      </field>
+      <field>
+        <name>E§AGE1</name>
+        <element>E§AGE1</element>
+      </field>
+      <field>
+        <name>E§PER1</name>
+        <element>E§PER1</element>
+      </field>
+      <field>
+        <name>E§CRCP</name>
+        <element>E§CRCP</element>
+      </field>
+      <field>
+        <name>E§COPA</name>
+        <element>E§COPA</element>
+      </field>
+      <field>
+        <name>E§CSP1</name>
+        <element>E§CSP1</element>
+      </field>
+      <field>
+        <name>E§CSP2</name>
+        <element>E§CSP2</element>
+      </field>
+      <field>
+        <name>E§CSP3</name>
+        <element>E§CSP3</element>
+      </field>
+      <field>
+        <name>E§CSP4</name>
+        <element>E§CSP4</element>
+      </field>
+      <field>
+        <name>E§CSP5</name>
+        <element>E§CSP5</element>
+      </field>
+      <field>
+        <name>E§LIST</name>
+        <element>E§LIST</element>
+      </field>
+      <field>
+        <name>E§SCON</name>
+        <element>E§SCON</element>
+      </field>
+      <field>
+        <name>E§PRIO</name>
+        <element>E§PRIO</element>
+      </field>
+      <field>
+        <name>E§FIDO</name>
+        <element>E§FIDO</element>
+      </field>
+      <field>
+        <name>E§BANC</name>
+        <element>E§BANC</element>
+      </field>
+      <field>
+        <name>E§CCOR</name>
+        <element>E§CCOR</element>
+      </field>
+      <field>
+        <name>E§CBA2</name>
+        <element>E§CBA2</element>
+      </field>
+      <field>
+        <name>E§IBAN</name>
+        <element>E§IBAN</element>
+      </field>
+      <field>
+        <name>E§SWIF</name>
+        <element>E§SWIF</element>
+      </field>
+      <field>
+        <name>E§CBA3</name>
+        <element>E§CBA3</element>
+      </field>
+      <field>
+        <name>E§DTIE</name>
+        <element>E§DTIE</element>
+      </field>
+      <field>
+        <name>E§DT01</name>
+        <element>E§DT01</element>
+      </field>
+      <field>
+        <name>E§DT02</name>
+        <element>E§DT02</element>
+      </field>
+      <field>
+        <name>E§DT03</name>
+        <element>E§DT03</element>
+      </field>
+      <field>
+        <name>E§DT04</name>
+        <element>E§DT04</element>
+      </field>
+      <field>
+        <name>E§DT05</name>
+        <element>E§DT05</element>
+      </field>
+      <field>
+        <name>E§DT06</name>
+        <element>E§DT06</element>
+      </field>
+      <field>
+        <name>E§DT07</name>
+        <element>E§DT07</element>
+      </field>
+      <field>
+        <name>E§DT08</name>
+        <element>E§DT08</element>
+      </field>
+      <field>
+        <name>E§DT09</name>
+        <element>E§DT09</element>
+      </field>
+      <field>
+        <name>E§DT10</name>
+        <element>E§DT10</element>
+      </field>
+      <field>
+        <name>E§COD1</name>
+        <element>E§COD1</element>
+      </field>
+      <field>
+        <name>E§COD2</name>
+        <element>E§COD2</element>
+      </field>
+      <field>
+        <name>E§COD3</name>
+        <element>E§COD3</element>
+      </field>
+      <field>
+        <name>E§COD4</name>
+        <element>E§COD4</element>
+      </field>
+      <field>
+        <name>E§COD5</name>
+        <element>E§COD5</element>
+      </field>
+      <field>
+        <name>E§COD6</name>
+        <element>E§COD6</element>
+      </field>
+      <field>
+        <name>E§COD7</name>
+        <element>E§COD7</element>
+      </field>
+      <field>
+        <name>E§COD8</name>
+        <element>E§COD8</element>
+      </field>
+      <field>
+        <name>E§COD9</name>
+        <element>E§COD9</element>
+      </field>
+      <field>
+        <name>E§COD0</name>
+        <element>E§COD0</element>
+      </field>
+      <field>
+        <name>E§NUM1</name>
+        <element>E§NUM1</element>
+      </field>
+      <field>
+        <name>E§NUM2</name>
+        <element>E§NUM2</element>
+      </field>
+      <field>
+        <name>E§NUM3</name>
+        <element>E§NUM3</element>
+      </field>
+      <field>
+        <name>E§NUM4</name>
+        <element>E§NUM4</element>
+      </field>
+      <field>
+        <name>E§NUM5</name>
+        <element>E§NUM5</element>
+      </field>
+      <field>
+        <name>E§NUM6</name>
+        <element>E§NUM6</element>
+      </field>
+      <field>
+        <name>E§NUM7</name>
+        <element>E§NUM7</element>
+      </field>
+      <field>
+        <name>E§NUM8</name>
+        <element>E§NUM8</element>
+      </field>
+      <field>
+        <name>E§NUM9</name>
+        <element>E§NUM9</element>
+      </field>
+      <field>
+        <name>E§NUM0</name>
+        <element>E§NUM0</element>
+      </field>
+      <field>
+        <name>E§FL01</name>
+        <element>E§FL01</element>
+      </field>
+      <field>
+        <name>E§FL02</name>
+        <element>E§FL02</element>
+      </field>
+      <field>
+        <name>E§FL03</name>
+        <element>E§FL03</element>
+      </field>
+      <field>
+        <name>E§FL04</name>
+        <element>E§FL04</element>
+      </field>
+      <field>
+        <name>E§FL05</name>
+        <element>E§FL05</element>
+      </field>
+      <field>
+        <name>E§FL06</name>
+        <element>E§FL06</element>
+      </field>
+      <field>
+        <name>E§FL07</name>
+        <element>E§FL07</element>
+      </field>
+      <field>
+        <name>E§FL08</name>
+        <element>E§FL08</element>
+      </field>
+      <field>
+        <name>E§FL09</name>
+        <element>E§FL09</element>
+      </field>
+      <field>
+        <name>E§FL10</name>
+        <element>E§FL10</element>
+      </field>
+      <field>
+        <name>E§FL11</name>
+        <element>E§FL11</element>
+      </field>
+      <field>
+        <name>E§FL12</name>
+        <element>E§FL12</element>
+      </field>
+      <field>
+        <name>E§FL13</name>
+        <element>E§FL13</element>
+      </field>
+      <field>
+        <name>E§FL14</name>
+        <element>E§FL14</element>
+      </field>
+      <field>
+        <name>E§FL15</name>
+        <element>E§FL15</element>
+      </field>
+      <field>
+        <name>E§FL16</name>
+        <element>E§FL16</element>
+      </field>
+      <field>
+        <name>E§FL17</name>
+        <element>E§FL17</element>
+      </field>
+      <field>
+        <name>E§FL18</name>
+        <element>E§FL18</element>
+      </field>
+      <field>
+        <name>E§FL19</name>
+        <element>E§FL19</element>
+      </field>
+      <field>
+        <name>E§FL20</name>
+        <element>E§FL20</element>
+      </field>
+      <field>
+        <name>E§FL21</name>
+        <element>E§FL21</element>
+      </field>
+      <field>
+        <name>E§FL22</name>
+        <element>E§FL22</element>
+      </field>
+      <field>
+        <name>E§FL23</name>
+        <element>E§FL23</element>
+      </field>
+      <field>
+        <name>E§FL24</name>
+        <element>E§FL24</element>
+      </field>
+      <field>
+        <name>E§FL25</name>
+        <element>E§FL25</element>
+      </field>
+      <field>
+        <name>E§FL26</name>
+        <element>E§FL26</element>
+      </field>
+      <field>
+        <name>E§FL27</name>
+        <element>E§FL27</element>
+      </field>
+      <field>
+        <name>E§FL28</name>
+        <element>E§FL28</element>
+      </field>
+      <field>
+        <name>E§FL29</name>
+        <element>E§FL29</element>
+      </field>
+      <field>
+        <name>E§FL30</name>
+        <element>E§FL30</element>
+      </field>
+      <field>
+        <name>E§FL31</name>
+        <element>E§FL31</element>
+      </field>
+      <field>
+        <name>E§FL32</name>
+        <element>E§FL32</element>
+      </field>
+      <field>
+        <name>E§FL33</name>
+        <element>E§FL33</element>
+      </field>
+      <field>
+        <name>E§FL34</name>
+        <element>E§FL34</element>
+      </field>
+      <field>
+        <name>E§FL35</name>
+        <element>E§FL35</element>
+      </field>
+      <field>
+        <name>E§FL36</name>
+        <element>E§FL36</element>
+      </field>
+      <field>
+        <name>E§FL37</name>
+        <element>E§FL37</element>
+      </field>
+      <field>
+        <name>E§FL38</name>
+        <element>E§FL38</element>
+      </field>
+      <field>
+        <name>E§FL39</name>
+        <element>E§FL39</element>
+      </field>
+      <field>
+        <name>E§FL40</name>
+        <element>E§FL40</element>
+      </field>
+      <field>
+        <name>E§ORIN</name>
+        <element>E§ORIN</element>
+      </field>
+      <field>
+        <name>E§DTIN</name>
+        <element>E§DTIN</element>
+      </field>
+      <field>
+        <name>E§USIN</name>
+        <element>E§USIN</element>
+      </field>
+      <field>
+        <name>E§ORAG</name>
+        <element>E§ORAG</element>
+      </field>
+      <field>
+        <name>E§DTAG</name>
+        <element>E§DTAG</element>
+      </field>
+      <field>
+        <name>E§USAG</name>
+        <element>E§USAG</element>
+      </field>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>432</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Calculator</name>
+    <type>Calculator</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <failIfNoFile>Y</failIfNoFile>
+    <calculation>
+      <field_name>SCORE</field_name>
+      <calc_type>GET_ONLY_DIGITS</calc_type>
+      <field_a>E§IDOJ</field_a>
+      <field_b />
+      <field_c />
+      <value_type>None</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <remove>N</remove>
+      <conversion_mask />
+      <decimal_symbol />
+      <grouping_symbol />
+      <currency_symbol />
+    </calculation>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>JSON output 2</name>
+    <type>JsonOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <outputValue>JSON</outputValue>
+    <jsonBloc>data</jsonBloc>
+    <nrRowsInBloc>1</nrRowsInBloc>
+    <operation_type>outputvalue</operation_type>
+    <compatibility_mode>N</compatibility_mode>
+    <encoding>UTF-8</encoding>
+    <addtoresult>N</addtoresult>
+    <file>
+      <name />
+      <extention>js</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <create_parent_folder>N</create_parent_folder>
+      <DoNotOpenNewFileInit>N</DoNotOpenNewFileInit>
+      <servlet_output>N</servlet_output>
+    </file>
+    <fields>
+      <field>
+        <name>E§TRAG</name>
+        <element>E§TRAG</element>
+      </field>
+      <field>
+        <name>E§CRAG</name>
+        <element>E§CRAG</element>
+      </field>
+      <field>
+        <name>E§SCEN</name>
+        <element>E§SCEN</element>
+      </field>
+      <field>
+        <name>E§AZIE</name>
+        <element>E§AZIE</element>
+      </field>
+      <field>
+        <name>E§IDOJ</name>
+        <element>E§IDOJ</element>
+      </field>
+      <field>
+        <name>E§DINV</name>
+        <element>E§DINV</element>
+      </field>
+      <field>
+        <name>E§DFNV</name>
+        <element>E§DFNV</element>
+      </field>
+      <field>
+        <name>E§GRUP</name>
+        <element>E§GRUP</element>
+      </field>
+      <field>
+        <name>E§NMNE</name>
+        <element>E§NMNE</element>
+      </field>
+      <field>
+        <name>E§NCOD</name>
+        <element>E§NCOD</element>
+      </field>
+      <field>
+        <name>E§LIVE</name>
+        <element>E§LIVE</element>
+      </field>
+      <field>
+        <name>E§STAT</name>
+        <element>E§STAT</element>
+      </field>
+      <field>
+        <name>E§RAGS</name>
+        <element>E§RAGS</element>
+      </field>
+      <field>
+        <name>E§RAGA</name>
+        <element>E§RAGA</element>
+      </field>
+      <field>
+        <name>E§INDI</name>
+        <element>E§INDI</element>
+      </field>
+      <field>
+        <name>E§INDA</name>
+        <element>E§INDA</element>
+      </field>
+      <field>
+        <name>E§TELE</name>
+        <element>E§TELE</element>
+      </field>
+      <field>
+        <name>E§TFAX</name>
+        <element>E§TFAX</element>
+      </field>
+      <field>
+        <name>E§TELX</name>
+        <element>E§TELX</element>
+      </field>
+      <field>
+        <name>E§IEMA</name>
+        <element>E§IEMA</element>
+      </field>
+      <field>
+        <name>E§PECO</name>
+        <element>E§PECO</element>
+      </field>
+      <field>
+        <name>E§CNAZ</name>
+        <element>E§CNAZ</element>
+      </field>
+      <field>
+        <name>E§CREG</name>
+        <element>E§CREG</element>
+      </field>
+      <field>
+        <name>E§CCOM</name>
+        <element>E§CCOM</element>
+      </field>
+      <field>
+        <name>E§LOCA</name>
+        <element>E§LOCA</element>
+      </field>
+      <field>
+        <name>E§PROV</name>
+        <element>E§PROV</element>
+      </field>
+      <field>
+        <name>E§NAZI</name>
+        <element>E§NAZI</element>
+      </field>
+      <field>
+        <name>E§CAPA</name>
+        <element>E§CAPA</element>
+      </field>
+      <field>
+        <name>E§ZONA</name>
+        <element>E§ZONA</element>
+      </field>
+      <field>
+        <name>E§LING</name>
+        <element>E§LING</element>
+      </field>
+      <field>
+        <name>E§VALU</name>
+        <element>E§VALU</element>
+      </field>
+      <field>
+        <name>E§TSOG</name>
+        <element>E§TSOG</element>
+      </field>
+      <field>
+        <name>E§CPAI</name>
+        <element>E§CPAI</element>
+      </field>
+      <field>
+        <name>E§COFI</name>
+        <element>E§COFI</element>
+      </field>
+      <field>
+        <name>E§CPAE</name>
+        <element>E§CPAE</element>
+      </field>
+      <field>
+        <name>E§CTA1</name>
+        <element>E§CTA1</element>
+      </field>
+      <field>
+        <name>E§CTA2</name>
+        <element>E§CTA2</element>
+      </field>
+      <field>
+        <name>E§CTA3</name>
+        <element>E§CTA3</element>
+      </field>
+      <field>
+        <name>E§DVES</name>
+        <element>E§DVES</element>
+      </field>
+      <field>
+        <name>E§CDIN</name>
+        <element>E§CDIN</element>
+      </field>
+      <field>
+        <name>E§DDIN</name>
+        <element>E§DDIN</element>
+      </field>
+      <field>
+        <name>E§TNOM</name>
+        <element>E§TNOM</element>
+      </field>
+      <field>
+        <name>E§CNOM</name>
+        <element>E§CNOM</element>
+      </field>
+      <field>
+        <name>E§TSPE</name>
+        <element>E§TSPE</element>
+      </field>
+      <field>
+        <name>E§CSPE</name>
+        <element>E§CSPE</element>
+      </field>
+      <field>
+        <name>E§TCON</name>
+        <element>E§TCON</element>
+      </field>
+      <field>
+        <name>E§CCON</name>
+        <element>E§CCON</element>
+      </field>
+      <field>
+        <name>E§TINC</name>
+        <element>E§TINC</element>
+      </field>
+      <field>
+        <name>E§CINC</name>
+        <element>E§CINC</element>
+      </field>
+      <field>
+        <name>E§TPRZ</name>
+        <element>E§TPRZ</element>
+      </field>
+      <field>
+        <name>E§CPRZ</name>
+        <element>E§CPRZ</element>
+      </field>
+      <field>
+        <name>E§TCRR</name>
+        <element>E§TCRR</element>
+      </field>
+      <field>
+        <name>E§CCRR</name>
+        <element>E§CCRR</element>
+      </field>
+      <field>
+        <name>E§TVET</name>
+        <element>E§TVET</element>
+      </field>
+      <field>
+        <name>E§CVET</name>
+        <element>E§CVET</element>
+      </field>
+      <field>
+        <name>E§CACO</name>
+        <element>E§CACO</element>
+      </field>
+      <field>
+        <name>E§CACR</name>
+        <element>E§CACR</element>
+      </field>
+      <field>
+        <name>E§CLAB</name>
+        <element>E§CLAB</element>
+      </field>
+      <field>
+        <name>E§CLAV</name>
+        <element>E§CLAV</element>
+      </field>
+      <field>
+        <name>E§CSME</name>
+        <element>E§CSME</element>
+      </field>
+      <field>
+        <name>E§CONS</name>
+        <element>E§CONS</element>
+      </field>
+      <field>
+        <name>E§SPED</name>
+        <element>E§SPED</element>
+      </field>
+      <field>
+        <name>E§IMBA</name>
+        <element>E§IMBA</element>
+      </field>
+      <field>
+        <name>E§CAUS</name>
+        <element>E§CAUS</element>
+      </field>
+      <field>
+        <name>E§GCHI</name>
+        <element>E§GCHI</element>
+      </field>
+      <field>
+        <name>E§GCON</name>
+        <element>E§GCON</element>
+      </field>
+      <field>
+        <name>E§GCOL</name>
+        <element>E§GCOL</element>
+      </field>
+      <field>
+        <name>E§AGEN</name>
+        <element>E§AGEN</element>
+      </field>
+      <field>
+        <name>E§PERP</name>
+        <element>E§PERP</element>
+      </field>
+      <field>
+        <name>E§AGE1</name>
+        <element>E§AGE1</element>
+      </field>
+      <field>
+        <name>E§PER1</name>
+        <element>E§PER1</element>
+      </field>
+      <field>
+        <name>E§CRCP</name>
+        <element>E§CRCP</element>
+      </field>
+      <field>
+        <name>E§COPA</name>
+        <element>E§COPA</element>
+      </field>
+      <field>
+        <name>E§CSP1</name>
+        <element>E§CSP1</element>
+      </field>
+      <field>
+        <name>E§CSP2</name>
+        <element>E§CSP2</element>
+      </field>
+      <field>
+        <name>E§CSP3</name>
+        <element>E§CSP3</element>
+      </field>
+      <field>
+        <name>E§CSP4</name>
+        <element>E§CSP4</element>
+      </field>
+      <field>
+        <name>E§CSP5</name>
+        <element>E§CSP5</element>
+      </field>
+      <field>
+        <name>E§LIST</name>
+        <element>E§LIST</element>
+      </field>
+      <field>
+        <name>E§SCON</name>
+        <element>E§SCON</element>
+      </field>
+      <field>
+        <name>E§PRIO</name>
+        <element>E§PRIO</element>
+      </field>
+      <field>
+        <name>E§FIDO</name>
+        <element>E§FIDO</element>
+      </field>
+      <field>
+        <name>E§BANC</name>
+        <element>E§BANC</element>
+      </field>
+      <field>
+        <name>E§CCOR</name>
+        <element>E§CCOR</element>
+      </field>
+      <field>
+        <name>E§CBA2</name>
+        <element>E§CBA2</element>
+      </field>
+      <field>
+        <name>E§IBAN</name>
+        <element>E§IBAN</element>
+      </field>
+      <field>
+        <name>E§SWIF</name>
+        <element>E§SWIF</element>
+      </field>
+      <field>
+        <name>E§CBA3</name>
+        <element>E§CBA3</element>
+      </field>
+      <field>
+        <name>E§DTIE</name>
+        <element>E§DTIE</element>
+      </field>
+      <field>
+        <name>E§DT01</name>
+        <element>E§DT01</element>
+      </field>
+      <field>
+        <name>E§DT02</name>
+        <element>E§DT02</element>
+      </field>
+      <field>
+        <name>E§DT03</name>
+        <element>E§DT03</element>
+      </field>
+      <field>
+        <name>E§DT04</name>
+        <element>E§DT04</element>
+      </field>
+      <field>
+        <name>E§DT05</name>
+        <element>E§DT05</element>
+      </field>
+      <field>
+        <name>E§DT06</name>
+        <element>E§DT06</element>
+      </field>
+      <field>
+        <name>E§DT07</name>
+        <element>E§DT07</element>
+      </field>
+      <field>
+        <name>E§DT08</name>
+        <element>E§DT08</element>
+      </field>
+      <field>
+        <name>E§DT09</name>
+        <element>E§DT09</element>
+      </field>
+      <field>
+        <name>E§DT10</name>
+        <element>E§DT10</element>
+      </field>
+      <field>
+        <name>E§COD1</name>
+        <element>E§COD1</element>
+      </field>
+      <field>
+        <name>E§COD2</name>
+        <element>E§COD2</element>
+      </field>
+      <field>
+        <name>E§COD3</name>
+        <element>E§COD3</element>
+      </field>
+      <field>
+        <name>E§COD4</name>
+        <element>E§COD4</element>
+      </field>
+      <field>
+        <name>E§COD5</name>
+        <element>E§COD5</element>
+      </field>
+      <field>
+        <name>E§COD6</name>
+        <element>E§COD6</element>
+      </field>
+      <field>
+        <name>E§COD7</name>
+        <element>E§COD7</element>
+      </field>
+      <field>
+        <name>E§COD8</name>
+        <element>E§COD8</element>
+      </field>
+      <field>
+        <name>E§COD9</name>
+        <element>E§COD9</element>
+      </field>
+      <field>
+        <name>E§COD0</name>
+        <element>E§COD0</element>
+      </field>
+      <field>
+        <name>E§NUM1</name>
+        <element>E§NUM1</element>
+      </field>
+      <field>
+        <name>E§NUM2</name>
+        <element>E§NUM2</element>
+      </field>
+      <field>
+        <name>E§NUM3</name>
+        <element>E§NUM3</element>
+      </field>
+      <field>
+        <name>E§NUM4</name>
+        <element>E§NUM4</element>
+      </field>
+      <field>
+        <name>E§NUM5</name>
+        <element>E§NUM5</element>
+      </field>
+      <field>
+        <name>E§NUM6</name>
+        <element>E§NUM6</element>
+      </field>
+      <field>
+        <name>E§NUM7</name>
+        <element>E§NUM7</element>
+      </field>
+      <field>
+        <name>E§NUM8</name>
+        <element>E§NUM8</element>
+      </field>
+      <field>
+        <name>E§NUM9</name>
+        <element>E§NUM9</element>
+      </field>
+      <field>
+        <name>E§NUM0</name>
+        <element>E§NUM0</element>
+      </field>
+      <field>
+        <name>E§FL01</name>
+        <element>E§FL01</element>
+      </field>
+      <field>
+        <name>E§FL02</name>
+        <element>E§FL02</element>
+      </field>
+      <field>
+        <name>E§FL03</name>
+        <element>E§FL03</element>
+      </field>
+      <field>
+        <name>E§FL04</name>
+        <element>E§FL04</element>
+      </field>
+      <field>
+        <name>E§FL05</name>
+        <element>E§FL05</element>
+      </field>
+      <field>
+        <name>E§FL06</name>
+        <element>E§FL06</element>
+      </field>
+      <field>
+        <name>E§FL07</name>
+        <element>E§FL07</element>
+      </field>
+      <field>
+        <name>E§FL08</name>
+        <element>E§FL08</element>
+      </field>
+      <field>
+        <name>E§FL09</name>
+        <element>E§FL09</element>
+      </field>
+      <field>
+        <name>E§FL10</name>
+        <element>E§FL10</element>
+      </field>
+      <field>
+        <name>E§FL11</name>
+        <element>E§FL11</element>
+      </field>
+      <field>
+        <name>E§FL12</name>
+        <element>E§FL12</element>
+      </field>
+      <field>
+        <name>E§FL13</name>
+        <element>E§FL13</element>
+      </field>
+      <field>
+        <name>E§FL14</name>
+        <element>E§FL14</element>
+      </field>
+      <field>
+        <name>E§FL15</name>
+        <element>E§FL15</element>
+      </field>
+      <field>
+        <name>E§FL16</name>
+        <element>E§FL16</element>
+      </field>
+      <field>
+        <name>E§FL17</name>
+        <element>E§FL17</element>
+      </field>
+      <field>
+        <name>E§FL18</name>
+        <element>E§FL18</element>
+      </field>
+      <field>
+        <name>E§FL19</name>
+        <element>E§FL19</element>
+      </field>
+      <field>
+        <name>E§FL20</name>
+        <element>E§FL20</element>
+      </field>
+      <field>
+        <name>E§FL21</name>
+        <element>E§FL21</element>
+      </field>
+      <field>
+        <name>E§FL22</name>
+        <element>E§FL22</element>
+      </field>
+      <field>
+        <name>E§FL23</name>
+        <element>E§FL23</element>
+      </field>
+      <field>
+        <name>E§FL24</name>
+        <element>E§FL24</element>
+      </field>
+      <field>
+        <name>E§FL25</name>
+        <element>E§FL25</element>
+      </field>
+      <field>
+        <name>E§FL26</name>
+        <element>E§FL26</element>
+      </field>
+      <field>
+        <name>E§FL27</name>
+        <element>E§FL27</element>
+      </field>
+      <field>
+        <name>E§FL28</name>
+        <element>E§FL28</element>
+      </field>
+      <field>
+        <name>E§FL29</name>
+        <element>E§FL29</element>
+      </field>
+      <field>
+        <name>E§FL30</name>
+        <element>E§FL30</element>
+      </field>
+      <field>
+        <name>E§FL31</name>
+        <element>E§FL31</element>
+      </field>
+      <field>
+        <name>E§FL32</name>
+        <element>E§FL32</element>
+      </field>
+      <field>
+        <name>E§FL33</name>
+        <element>E§FL33</element>
+      </field>
+      <field>
+        <name>E§FL34</name>
+        <element>E§FL34</element>
+      </field>
+      <field>
+        <name>E§FL35</name>
+        <element>E§FL35</element>
+      </field>
+      <field>
+        <name>E§FL36</name>
+        <element>E§FL36</element>
+      </field>
+      <field>
+        <name>E§FL37</name>
+        <element>E§FL37</element>
+      </field>
+      <field>
+        <name>E§FL38</name>
+        <element>E§FL38</element>
+      </field>
+      <field>
+        <name>E§FL39</name>
+        <element>E§FL39</element>
+      </field>
+      <field>
+        <name>E§FL40</name>
+        <element>E§FL40</element>
+      </field>
+      <field>
+        <name>E§ORIN</name>
+        <element>E§ORIN</element>
+      </field>
+      <field>
+        <name>E§DTIN</name>
+        <element>E§DTIN</element>
+      </field>
+      <field>
+        <name>E§USIN</name>
+        <element>E§USIN</element>
+      </field>
+      <field>
+        <name>E§ORAG</name>
+        <element>E§ORAG</element>
+      </field>
+      <field>
+        <name>E§DTAG</name>
+        <element>E§DTAG</element>
+      </field>
+      <field>
+        <name>E§USAG</name>
+        <element>E§USAG</element>
+      </field>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Redis Output 2</name>
+    <type>RedisOutputStep</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <arguments>
+      <command>SET</command>
+      <url>172.16.2.123:6379</url>
+    </arguments>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values 2</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <remove>
+        <name>E§TRAG</name>
+      </remove>
+      <remove>
+        <name>E§CRAG</name>
+      </remove>
+      <remove>
+        <name>E§SCEN</name>
+      </remove>
+      <remove>
+        <name>E§AZIE</name>
+      </remove>
+      <remove>
+        <name>E§DINV</name>
+      </remove>
+      <remove>
+        <name>E§DFNV</name>
+      </remove>
+      <remove>
+        <name>E§GRUP</name>
+      </remove>
+      <remove>
+        <name>E§NMNE</name>
+      </remove>
+      <remove>
+        <name>E§NCOD</name>
+      </remove>
+      <remove>
+        <name>E§LIVE</name>
+      </remove>
+      <remove>
+        <name>E§STAT</name>
+      </remove>
+      <remove>
+        <name>E§RAGS</name>
+      </remove>
+      <remove>
+        <name>E§RAGA</name>
+      </remove>
+      <remove>
+        <name>E§INDI</name>
+      </remove>
+      <remove>
+        <name>E§INDA</name>
+      </remove>
+      <remove>
+        <name>E§TELE</name>
+      </remove>
+      <remove>
+        <name>E§TFAX</name>
+      </remove>
+      <remove>
+        <name>E§TELX</name>
+      </remove>
+      <remove>
+        <name>E§IEMA</name>
+      </remove>
+      <remove>
+        <name>E§PECO</name>
+      </remove>
+      <remove>
+        <name>E§CNAZ</name>
+      </remove>
+      <remove>
+        <name>E§CREG</name>
+      </remove>
+      <remove>
+        <name>E§CCOM</name>
+      </remove>
+      <remove>
+        <name>E§LOCA</name>
+      </remove>
+      <remove>
+        <name>E§PROV</name>
+      </remove>
+      <remove>
+        <name>E§NAZI</name>
+      </remove>
+      <remove>
+        <name>E§CAPA</name>
+      </remove>
+      <remove>
+        <name>E§ZONA</name>
+      </remove>
+      <remove>
+        <name>E§LING</name>
+      </remove>
+      <remove>
+        <name>E§VALU</name>
+      </remove>
+      <remove>
+        <name>E§TSOG</name>
+      </remove>
+      <remove>
+        <name>E§CPAI</name>
+      </remove>
+      <remove>
+        <name>E§COFI</name>
+      </remove>
+      <remove>
+        <name>E§CPAE</name>
+      </remove>
+      <remove>
+        <name>E§CTA1</name>
+      </remove>
+      <remove>
+        <name>E§CTA2</name>
+      </remove>
+      <remove>
+        <name>E§CTA3</name>
+      </remove>
+      <remove>
+        <name>E§DVES</name>
+      </remove>
+      <remove>
+        <name>E§CDIN</name>
+      </remove>
+      <remove>
+        <name>E§DDIN</name>
+      </remove>
+      <remove>
+        <name>E§TNOM</name>
+      </remove>
+      <remove>
+        <name>E§CNOM</name>
+      </remove>
+      <remove>
+        <name>E§TSPE</name>
+      </remove>
+      <remove>
+        <name>E§CSPE</name>
+      </remove>
+      <remove>
+        <name>E§TCON</name>
+      </remove>
+      <remove>
+        <name>E§CCON</name>
+      </remove>
+      <remove>
+        <name>E§TINC</name>
+      </remove>
+      <remove>
+        <name>E§CINC</name>
+      </remove>
+      <remove>
+        <name>E§TPRZ</name>
+      </remove>
+      <remove>
+        <name>E§CPRZ</name>
+      </remove>
+      <remove>
+        <name>E§TCRR</name>
+      </remove>
+      <remove>
+        <name>E§CCRR</name>
+      </remove>
+      <remove>
+        <name>E§TVET</name>
+      </remove>
+      <remove>
+        <name>E§CVET</name>
+      </remove>
+      <remove>
+        <name>E§CACO</name>
+      </remove>
+      <remove>
+        <name>E§CACR</name>
+      </remove>
+      <remove>
+        <name>E§CLAB</name>
+      </remove>
+      <remove>
+        <name>E§CLAV</name>
+      </remove>
+      <remove>
+        <name>E§CSME</name>
+      </remove>
+      <remove>
+        <name>E§CONS</name>
+      </remove>
+      <remove>
+        <name>E§SPED</name>
+      </remove>
+      <remove>
+        <name>E§IMBA</name>
+      </remove>
+      <remove>
+        <name>E§CAUS</name>
+      </remove>
+      <remove>
+        <name>E§GCHI</name>
+      </remove>
+      <remove>
+        <name>E§GCON</name>
+      </remove>
+      <remove>
+        <name>E§GCOL</name>
+      </remove>
+      <remove>
+        <name>E§AGEN</name>
+      </remove>
+      <remove>
+        <name>E§PERP</name>
+      </remove>
+      <remove>
+        <name>E§AGE1</name>
+      </remove>
+      <remove>
+        <name>E§PER1</name>
+      </remove>
+      <remove>
+        <name>E§CRCP</name>
+      </remove>
+      <remove>
+        <name>E§COPA</name>
+      </remove>
+      <remove>
+        <name>E§CSP1</name>
+      </remove>
+      <remove>
+        <name>E§CSP2</name>
+      </remove>
+      <remove>
+        <name>E§CSP3</name>
+      </remove>
+      <remove>
+        <name>E§CSP4</name>
+      </remove>
+      <remove>
+        <name>E§CSP5</name>
+      </remove>
+      <remove>
+        <name>E§LIST</name>
+      </remove>
+      <remove>
+        <name>E§SCON</name>
+      </remove>
+      <remove>
+        <name>E§PRIO</name>
+      </remove>
+      <remove>
+        <name>E§FIDO</name>
+      </remove>
+      <remove>
+        <name>E§BANC</name>
+      </remove>
+      <remove>
+        <name>E§CCOR</name>
+      </remove>
+      <remove>
+        <name>E§CBA2</name>
+      </remove>
+      <remove>
+        <name>E§IBAN</name>
+      </remove>
+      <remove>
+        <name>E§SWIF</name>
+      </remove>
+      <remove>
+        <name>E§CBA3</name>
+      </remove>
+      <remove>
+        <name>E§DTIE</name>
+      </remove>
+      <remove>
+        <name>E§DT01</name>
+      </remove>
+      <remove>
+        <name>E§DT02</name>
+      </remove>
+      <remove>
+        <name>E§DT03</name>
+      </remove>
+      <remove>
+        <name>E§DT04</name>
+      </remove>
+      <remove>
+        <name>E§DT05</name>
+      </remove>
+      <remove>
+        <name>E§DT06</name>
+      </remove>
+      <remove>
+        <name>E§DT07</name>
+      </remove>
+      <remove>
+        <name>E§DT08</name>
+      </remove>
+      <remove>
+        <name>E§DT09</name>
+      </remove>
+      <remove>
+        <name>E§DT10</name>
+      </remove>
+      <remove>
+        <name>E§COD1</name>
+      </remove>
+      <remove>
+        <name>E§COD2</name>
+      </remove>
+      <remove>
+        <name>E§COD3</name>
+      </remove>
+      <remove>
+        <name>E§COD4</name>
+      </remove>
+      <remove>
+        <name>E§COD5</name>
+      </remove>
+      <remove>
+        <name>E§COD6</name>
+      </remove>
+      <remove>
+        <name>E§COD7</name>
+      </remove>
+      <remove>
+        <name>E§COD8</name>
+      </remove>
+      <remove>
+        <name>E§COD9</name>
+      </remove>
+      <remove>
+        <name>E§COD0</name>
+      </remove>
+      <remove>
+        <name>E§NUM1</name>
+      </remove>
+      <remove>
+        <name>E§NUM2</name>
+      </remove>
+      <remove>
+        <name>E§NUM3</name>
+      </remove>
+      <remove>
+        <name>E§NUM4</name>
+      </remove>
+      <remove>
+        <name>E§NUM5</name>
+      </remove>
+      <remove>
+        <name>E§NUM6</name>
+      </remove>
+      <remove>
+        <name>E§NUM7</name>
+      </remove>
+      <remove>
+        <name>E§NUM8</name>
+      </remove>
+      <remove>
+        <name>E§NUM9</name>
+      </remove>
+      <remove>
+        <name>E§NUM0</name>
+      </remove>
+      <remove>
+        <name>E§FL01</name>
+      </remove>
+      <remove>
+        <name>E§FL02</name>
+      </remove>
+      <remove>
+        <name>E§FL03</name>
+      </remove>
+      <remove>
+        <name>E§FL04</name>
+      </remove>
+      <remove>
+        <name>E§FL05</name>
+      </remove>
+      <remove>
+        <name>E§FL06</name>
+      </remove>
+      <remove>
+        <name>E§FL07</name>
+      </remove>
+      <remove>
+        <name>E§FL08</name>
+      </remove>
+      <remove>
+        <name>E§FL09</name>
+      </remove>
+      <remove>
+        <name>E§FL10</name>
+      </remove>
+      <remove>
+        <name>E§FL11</name>
+      </remove>
+      <remove>
+        <name>E§FL12</name>
+      </remove>
+      <remove>
+        <name>E§FL13</name>
+      </remove>
+      <remove>
+        <name>E§FL14</name>
+      </remove>
+      <remove>
+        <name>E§FL15</name>
+      </remove>
+      <remove>
+        <name>E§FL16</name>
+      </remove>
+      <remove>
+        <name>E§FL17</name>
+      </remove>
+      <remove>
+        <name>E§FL18</name>
+      </remove>
+      <remove>
+        <name>E§FL19</name>
+      </remove>
+      <remove>
+        <name>E§FL20</name>
+      </remove>
+      <remove>
+        <name>E§FL21</name>
+      </remove>
+      <remove>
+        <name>E§FL22</name>
+      </remove>
+      <remove>
+        <name>E§FL23</name>
+      </remove>
+      <remove>
+        <name>E§FL24</name>
+      </remove>
+      <remove>
+        <name>E§FL25</name>
+      </remove>
+      <remove>
+        <name>E§FL26</name>
+      </remove>
+      <remove>
+        <name>E§FL27</name>
+      </remove>
+      <remove>
+        <name>E§FL28</name>
+      </remove>
+      <remove>
+        <name>E§FL29</name>
+      </remove>
+      <remove>
+        <name>E§FL30</name>
+      </remove>
+      <remove>
+        <name>E§FL31</name>
+      </remove>
+      <remove>
+        <name>E§FL32</name>
+      </remove>
+      <remove>
+        <name>E§FL33</name>
+      </remove>
+      <remove>
+        <name>E§FL34</name>
+      </remove>
+      <remove>
+        <name>E§FL35</name>
+      </remove>
+      <remove>
+        <name>E§FL36</name>
+      </remove>
+      <remove>
+        <name>E§FL37</name>
+      </remove>
+      <remove>
+        <name>E§FL38</name>
+      </remove>
+      <remove>
+        <name>E§FL39</name>
+      </remove>
+      <remove>
+        <name>E§FL40</name>
+      </remove>
+      <remove>
+        <name>E§ORIN</name>
+      </remove>
+      <remove>
+        <name>E§DTIN</name>
+      </remove>
+      <remove>
+        <name>E§USIN</name>
+      </remove>
+      <remove>
+        <name>E§ORAG</name>
+      </remove>
+      <remove>
+        <name>E§DTAG</name>
+      </remove>
+      <remove>
+        <name>E§USAG</name>
+      </remove>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>544</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+  <attributes />
+</transformation>

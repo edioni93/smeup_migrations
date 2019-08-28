@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  redis-master:
+    image: 'redis:latest'
+    ports:
+      - '6379:6379'
+    environment:
+      - REDIS_REPLICATION_MODE=master
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_PASSWORD = 'password'
+    volumes:
+      - './bitnami:/bitnami'
+
+
+

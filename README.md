@@ -34,4 +34,4 @@ La migrazione è stata ultimata con Pentaho Data Integration. Mentre l'interroga
 
 Il repository contiene tutti i file di migraione. 
 
-23 agosto 2019
+28 agosto 2019
